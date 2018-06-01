@@ -35,7 +35,7 @@ Para o front end foi utilizado o framework [Angular Material](https://material.a
 Através do terminal clone o projeto
 >> git clone https://github.com/acamilass/app-decora.git
 
-Na pasta app-decora baixe os pacotes
+Na pasta decora-app baixe os pacotes
 >> npm install
 
 Agora execute o comando, para efetuar o deploy de produção
