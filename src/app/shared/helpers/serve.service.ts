@@ -31,8 +31,21 @@ export class ServeService {
     });
   }
 
-  signUp(user: User): Promise<boolean> {
+  signUp(user: User): Promise<any> {
+    const email = user.email;
     return this.dbService
+    .select(databaseUser, {email})
+    .then(result => {
+      if (result[0]) {
+        throw `Usuário ${email} já cadastrado`;
+      };
+      this.save(user);
+    })
+  
+  }
+
+  save(user) {
+    this.dbService
     .insert(databaseUser, user)
     .then(rowsAffected => {
       if (rowsAffected > 0) return true;

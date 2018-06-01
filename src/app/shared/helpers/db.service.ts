@@ -29,12 +29,14 @@ export class DbService {
   }
   
   getAll(database: IDataBase): Promise<any> {
+    this.connection.openDb(database.name);
     return this.connection.select<any>({
       from: database.name
     });
   }
 
   insert(database: IDataBase, values: object): Promise<any> {
+    this.connection.openDb(database.name);
     return this.connection.insert({
       into: database.name,
       values: [values]
@@ -42,6 +44,7 @@ export class DbService {
   }
 
   remove(database: IDataBase, where: object): Promise<any> {
+    this.connection.openDb(database.name);
     return this.connection.remove({
       from: database.name,
       where
@@ -49,6 +52,7 @@ export class DbService {
   }
 
   select(database: IDataBase, where: object): Promise<any> {
+    this.connection.openDb(database.name);
     return this.connection.select<any>({
       from: database.name,
       where
@@ -56,6 +60,7 @@ export class DbService {
   }
 
   update(database: IDataBase, set: object, where: object): Promise<any> {
+    this.connection.openDb(database.name);
     return this.connection.update({
       in: database.name,
       set,

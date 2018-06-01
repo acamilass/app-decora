@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --output-path=dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve": "node_modules/.bin/serve -s dist/decora-app"
+    "serve": "node_modules/.bin/serve -s dist"
   },
   "private": true,
   "dependencies": {

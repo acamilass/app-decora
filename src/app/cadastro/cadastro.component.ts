@@ -58,11 +58,9 @@ export class CadastroComponent implements OnInit {
       this.serve
       .signUp(this.user)
       .then(result => {
-        result === true ?
-        this.toastr.success("Usuário cadastrado com sucesso") :
-        this.toastr.warning("Erro ao cadastrar")
+        this.toastr.success("Usuário cadastrado com sucesso");
       })
-      .catch(error => this.toastr.warning(error.message));
+      .catch(error => this.toastr.warning(error));
     }
   }
 
