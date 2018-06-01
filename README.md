@@ -1,27 +1,49 @@
-# DecoraApp
+# Desafio Decora
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+Desenvolver aplicação web contendo os seguintes requisitos:
 
-## Development server
+- A aplicação deverá estar protegida por login e senha
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Deverá existir 2 tipos de perfis (ADMIN e USER)
 
-## Code scaffolding
+- Deverá possuir interface para pesquisa dos usuários cadastrados
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Deverá possuir interface para cadastro dos usuários da aplicação
 
-## Build
+- O usuário com acesso ADMIN poderá executar cadastro de outros usuários, e visualizar os usuários
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- O usuário com acesso USER poderá apenas visualizar os usuários do sistema
 
-## Running unit tests
+### Metodologia 
+> **Padrão:** Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> **Frameworks:** Angular, Angular Material, JSStore
 
-## Running end-to-end tests
+> **Instalação de pacotes:** npm install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> **Desenvolvedor:** Ana Camila Santos Sousa
 
-## Further help
+>  **Método de Desenvolvimento:**  A estrutura do projeto foi criada com a ferramenta [angular-cli](https://github.com/angular/angular-cli) e sua codificação baseada no style guide angular, encontrado em sua [documentação](https://angular.io/guide/styleguide). 
+Para o front end foi utilizado o framework [Angular Material](https://material.angular.io/) e para o armazenamento local o framework do Facebook o [JSStore](http://jsstore.net/) implementado através do arquivo [dbService](https://github.com/acamilass/app-decora/blob/master/src/app/shared/helpers/db.service.ts).
+ 
+### Deploy do projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**Requisitos:** A ferramenta Node deve estar instalada
+
+##### Passos
+
+Através do terminal clone o projeto
+>> git clone https://github.com/acamilass/app-decora.git
+
+Na pasta app-decora baixe os pacotes
+>> npm install
+
+Agora execute o comando, para efetuar o deploy de produção
+>>  npm run build
+
+Para executar localmente e testar a build de produção, use o seguinte comando
+>> npm run serve
+
+Agora você pode testar a sua aplicação através do endereço [http://localhost:3000](http://localhost:3000)
+
+
