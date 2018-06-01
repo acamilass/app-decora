@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-card>
+    <form class="form"  [formGroup]="cadastroForm" (ngSubmit)='onSubmit($event)'>
+
+      <mat-form-field>
+        <mat-icon matSuffix>person &nbsp;</mat-icon>  
+        <input type="text" matInput placeholder="Nome completo" formControlName="name" required>        
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-icon matSuffix>email &nbsp;</mat-icon>  
+        <input type="email" matInput placeholder="E-mail" formControlName="email" required>        
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-icon matSuffix>lock &nbsp;</mat-icon>  
+        <input type="password" matInput placeholder="Password" formControlName="password" required>        
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Tipo" formControlName="admin" required>
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{ type.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" type="submit">Cadastre</button>        
+      <span class="cadastro-form">ou Voltar para o <a  routerLink="/login">login</a></span>
+    </form>    
+  </mat-card>
+</div>

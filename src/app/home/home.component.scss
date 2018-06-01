@@ -1,0 +1,34 @@
+.container {      
+    
+    .filter-form {         
+        float: left;         
+        margin-left: 35px;         
+        margin-top: 15px;     
+    }      
+    
+    .table {         
+        width: 90%;         
+        margin: 0 auto;         
+        margin-top: 20px;         
+        text-align: center;          
+        
+        .column-name {             
+            text-align: center;         
+        }     
+    }      
+    
+    .paginator {         
+        width: 91%;     
+    }      
+    
+    .card-form {         
+        width: 82%;         
+        margin: 0 auto;         
+        margin-top: 30px;          
+    
+        .form {             
+            width: 200px;             
+            margin: 0 auto; 
+        }
+    }
+}

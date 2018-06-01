@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-card>
+    <form class="form"  [formGroup]="loginForm" (ngSubmit)='onSubmit($event)'>
+
+      <mat-form-field>
+        <mat-icon matSuffix>email &nbsp;</mat-icon>  
+        <input type="email" matInput placeholder="E-mail" formControlName="email">        
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-icon matSuffix>lock &nbsp;</mat-icon>  
+        <input type="password" matInput placeholder="Password" formControlName="password">        
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" type="submit">Login</button>        
+      <!-- <span class="cadastro-form">ou <a  routerLink="/cadastro">cadastre-se</a></span> -->
+    </form>    
+  </mat-card>
+</div>

@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" *ngIf="serve.currentUser !== ''">
+  <mat-toolbar-row>
+    <span> {{ serve.currentUser }} </span>
+    <span class="flex-spacer"></span>
+    <button mat-button (click)='logoff()'>Logout</button>
+  </mat-toolbar-row>
+
+</mat-toolbar>
