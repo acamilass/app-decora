@@ -46,4 +46,10 @@ Para executar localmente e testar a build de produção, use o seguinte comando
 
 Agora você pode testar a sua aplicação através do endereço [http://localhost:3000](http://localhost:3000)
 
+### Cadastro de novo usuário
+
+O admin poderá cadastrar um novo usuário através do endereço [http://localhost:3000/admin](http://localhost:3000/admin)
+
+
+
 
